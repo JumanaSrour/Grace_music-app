@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profileCont"
+    android:background="@color/profcolor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.Profile">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:minHeight="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <!--                <TextView-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:paddingTop="10dp"-->
+            <!--                    android:text="1k"-->
+            <!--                    android:textColor="@color/starBlue"-->
+            <!--                    android:textSize="20sp"-->
+            <!--                    android:textStyle="bold" />-->
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/appBarLayout3" />
+
+        <!-- TODO: Update blank fragment layout -->
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="?android:attr/windowBackground"
+            app:labelVisibilityMode="selected"
+            app:layout_constraintBottom_toBottomOf="@+id/view2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/bottom_nav_menu" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            tools:layout_editor_absoluteX="-99dp"
+            tools:layout_editor_absoluteY="201dp">
+
+
+            <ImageView
+                android:id="@+id/editperson"
+                android:layout_width="80dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginLeft="130dp"
+                android:layout_weight="1"
+                android:src="@drawable/person" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_marginTop="45dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:paddingLeft="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_email_black_24dp"/>
+            <TextView
+                android:id="@+id/editgmail"
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="matthew@gmail.com"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal"
+            android:paddingLeft="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/personprof"/>
+            <TextView
+                android:textStyle="bold"
+                android:id="@+id/editname"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="Matthew G. Smith"
+                />
+        </LinearLayout>
+
+
+
+        <!--        <LinearLayout-->
+        <!--            android:layout_marginTop="25dp"-->
+        <!--            android:orientation="horizontal"-->
+        <!--            android:paddingLeft="25dp"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content">-->
+
+        <!--            <ImageView-->
+        <!--                android:layout_width="36dp"-->
+        <!--                android:layout_height="36dp"-->
+        <!--                android:src="@drawable/ic_group_add_black_24dp"/>-->
+        <!--            <TextView-->
+        <!--                android:textStyle="bold"-->
+        <!--                android:layout_gravity="center_vertical"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:paddingLeft="20dp"-->
+        <!--                android:text="Add to group"-->
+        <!--                />-->
+        <!--        </LinearLayout>-->
+        <!--        <LinearLayout-->
+        <!--            android:layout_marginTop="25dp"-->
+        <!--            android:orientation="horizontal"-->
+        <!--            android:paddingLeft="25dp"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content">-->
+
+        <!--            <ImageView-->
+        <!--                android:layout_width="36dp"-->
+        <!--                android:layout_height="36dp"-->
+        <!--                android:src="@drawable/person"/>-->
+        <!--            <TextView-->
+        <!--                android:textStyle="bold"-->
+        <!--                android:layout_gravity="center_vertical"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:paddingLeft="20dp"-->
+        <!--                android:text="Show all comments"-->
+        <!--                />-->
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/saveprof"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="500dp"
+        android:background="@drawable/shapebtn"
+        android:text="Save"
+
+        android:textColor="#fff" />
+
+
+
+
+</FrameLayout>
